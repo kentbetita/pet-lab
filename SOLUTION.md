@@ -37,21 +37,21 @@ I built a React application with the following architecture:
 **Component Structure:**
 
 - `App.js` - Root component with basic layout structure
-- `ProductsPage.js` - Main container component managing pagination and layout
-- `FilterSidebar.js` - Handles all filtering logic (tags, price, subscription)
-- `ProductTable/` - Responsive product display system
+- `products.js` - Main container component managing pagination and layout
+- `filters.js` - Handles all filtering logic (tags, price, subscription)
+- `product-table` - Responsive product display system
   - `index.js` - Main table component with loading/error states
-  - `component/desktop.js` - Desktop table view
-  - `component/mobile.js` - Mobile card view
-- `Pagination.js` - Handles pagination with ellipsis for large page counts
+  - `/component/desktop.js` - Desktop table view
+  - `/component/mobile.js` - Mobile card view
+- `pagination.js` - Handles pagination with ellipsis for large page counts
 
 **Custom Hooks:**
 
-- `useProducts.js` - Centralized data fetching, filtering, and state management
+- `use-products.js` - Centralized data fetching, filtering, and state management
 
 **Utilities:**
 
-- `formatPrice()` - Currency formatting utility using Intl.NumberFormat
+- `formatPrice()` - Currency formatting utility using `Intl.NumberFormat`
 
 **Key Features Implemented:**
 
@@ -109,30 +109,27 @@ I built a React application with the following architecture:
 
 - `X-Total-Count` - Total number of matching products
 
-### Improvements for Better Product
+## Improvements for Better Product
 
-**1. Performance Optimizations (Estimate: 6 hours)**
+**1. UI/UX Improvements (Estimate: 6 hours)**
 
 - ✅ Debouncing implemented (500ms)
-- Add React.memo for component optimization
-- Implement virtual scrolling for very large datasets
 - Add loading skeletons instead of simple spinners
+- Breadcrumb navigation
+- Toast notifications for actions
 
 **2. Enhanced Filtering (Estimate: 8 hours)**
 
 - Multi-select tag filtering with checkboxes
 - Price range slider (min-max) instead of single max value
 - Sort functionality (price, name, date)
-- Filter chips showing active filters
 - Advanced search with multiple criteria
 
-**3. Better UX/UI (Estimate: 8 hours)**
+**2. New Features (Estimate: 8 hours)**
 
 - Add product detail modal on click
 - Implement wishlist functionality
 - Add "Add to Cart" buttons with quantity selectors
-- Breadcrumb navigation
-- Toast notifications for actions
 
 **4. Testing & Quality (Estimate: 8 hours)**
 
